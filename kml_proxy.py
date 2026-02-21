@@ -691,7 +691,6 @@ def mapmil_download_kmz_atak():
         kml_body = group_route_placemarks_into_folders(kml_body)
         kml_body = move_stale_items_to_inativos_folder(kml_body, "0_Inativos")
         kml_body = sort_kml_document_alphabetically(kml_body)
-        kmz_bytes = build_kmz_with_embedded_icons(kml_body, base_url)
 
         return kmz_response(kmz_bytes, "mapmil_atak.kmz")
     except Exception as e:
